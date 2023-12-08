@@ -15,12 +15,12 @@ app.use(cors({
     allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'x-api-key']
 }));
 
-// app.use((req, res, next) => {
-//     res.header('Access-Control-Allow-Origin', allowedOrigins);
-//     res.header('Access-Control-Allow-Methods', 'GET');
-//     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, x-api-key');
-//     next();
-// });
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', allowedOrigins);
+    res.header('Access-Control-Allow-Methods', 'GET');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, x-api-key');
+    next();
+});
 
 const URL = 'https://www.megaloterias.com.br/resultados';
 
