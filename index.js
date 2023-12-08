@@ -24,20 +24,20 @@ app.use((req, res, next) => {
 
 const URL = 'https://www.megaloterias.com.br/resultados';
 
-const apiKey = process.env.API_KEY;
+// const apiKey = process.env.API_KEY;
 
-app.use((req, res, next) => {
-    const userApiKey = req.headers['x-api-key'];
-    if (!userApiKey || userApiKey !== apiKey) {
-        return res.status(401).json({
-            status: 'error',
-            code: 401,
-            message: 'Unauthorized',
-            details: 'Invalid API key. Please provide a valid API key in the "x-api-key" header.'
-        });
-    }
-    next();
-});
+// app.use((req, res, next) => {
+//     const userApiKey = req.headers['x-api-key'];
+//     if (!userApiKey || userApiKey !== apiKey) {
+//         return res.status(401).json({
+//             status: 'error',
+//             code: 401,
+//             message: 'Unauthorized',
+//             details: 'Invalid API key. Please provide a valid API key in the "x-api-key" header.'
+//         });
+//     }
+//     next();
+// });
 
 app.get('/api/resultados', async (req, res) => {
     try {
