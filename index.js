@@ -11,9 +11,15 @@ app.use(express.json());
 const allowedOrigins = '*';
 app.use(cors({
     origin: allowedOrigins,
-    methods: 'GET',
-    allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'x-api-key']
+    methods: 'GET, POST, PUT, DELETE, OPTIONS',
+    allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, x-api-key'
 }));
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, x-api-key');
+    next();
+});
 
 const URL = 'https://www.megaloterias.com.br/resultados';
 
@@ -29,7 +35,7 @@ app.use((req, res, next) => {
             details: 'Invalid API key. Please provide a valid API key in the "x-api-key" header.'
         });
     }
-
+    
     next();
 });
 
