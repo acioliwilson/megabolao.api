@@ -1,0 +1,121 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/resultados",
+            "methods": ["GET"],
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "Content-Type, x-api-key",
+                "Access-Control-Allow-Max-Age": "86400"
+            },
+            "dest": "index.js"
+        },
+        {
+            "src": "/api/resultados/megasena",
+            "methods": ["GET"],
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "Content-Type, x-api-key",
+                "Access-Control-Allow-Max-Age": "86400"
+            },
+            "dest": "index.js"
+        },
+        {
+            "src": "/api/resultados/duplasena",
+            "methods": ["GET"],
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "Content-Type, x-api-key",
+                "Access-Control-Allow-Max-Age": "86400"
+            },
+            "dest": "index.js"
+        },
+        {
+            "src": "/api/resultados/lotofacil",
+            "methods": ["GET"],
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "Content-Type, x-api-key",
+                "Access-Control-Allow-Max-Age": "86400"
+            },
+            "dest": "index.js"
+        },
+        {
+            "src": "/api/resultados/quina",
+            "methods": ["GET"],
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "Content-Type, x-api-key",
+                "Access-Control-Allow-Max-Age": "86400"
+            },
+            "dest": "index.js"
+        },
+        {
+            "src": "/api/resultados/timemania",
+            "methods": ["GET"],
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "Content-Type, x-api-key",
+                "Access-Control-Allow-Max-Age": "86400"
+            },
+            "dest": "index.js"
+        },
+        {
+            "src": "/api/resultados/lotomania",
+            "methods": ["GET"],
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "Content-Type, x-api-key",
+                "Access-Control-Allow-Max-Age": "86400"
+            },
+            "dest": "index.js"
+        },
+        {
+            "src": "/api/resultados/diadesorte",
+            "methods": ["GET"],
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "Content-Type, x-api-key",
+                "Access-Control-Allow-Max-Age": "86400"
+            },
+            "dest": "index.js"
+        },
+        {
+            "src": "/api/resultados/supersete",
+            "methods": ["GET"],
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "Content-Type, x-api-key",
+                "Access-Control-Allow-Max-Age": "86400"
+            },
+            "dest": "index.js"
+        },
+        {
+            "src": "/api/resultados/maismilionaria",
+            "methods": ["GET"],
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "Content-Type, x-api-key",
+                "Access-Control-Allow-Max-Age": "86400"
+            },
+            "dest": "index.js"
+        }
+    ]
+}
